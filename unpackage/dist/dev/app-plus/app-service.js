@@ -38,7 +38,7 @@ if (uni.restoreGlobal) {
     }
     return target;
   };
-  const _sfc_main$2 = {
+  const _sfc_main$4 = {
     data() {
       return {
         title: "Hello, This is index"
@@ -48,7 +48,7 @@ if (uni.restoreGlobal) {
     },
     methods: {}
   };
-  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
       vue.createElementVNode("image", {
         class: "logo",
@@ -59,14 +59,26 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__file", "D:/\u684C\u9762/uni-app-dev/uniAppDev/pages/index/index.vue"]]);
+  const PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__file", "D:/\u684C\u9762/uni-app-dev/uniAppDev/pages/index/index.vue"]]);
+  const _sfc_main$3 = {};
+  function _sfc_render$2(_ctx, _cache) {
+    return vue.openBlock(), vue.createElementBlock("view", null, "This is detail");
+  }
+  const PagesDetailDetail = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__file", "D:/\u684C\u9762/uni-app-dev/uniAppDev/pages/detail/detail.vue"]]);
+  const _sfc_main$2 = {};
+  function _sfc_render$1(_ctx, _cache) {
+    return vue.openBlock(), vue.createElementBlock("view", null, "This is contact");
+  }
+  const PagesContactContact = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__file", "D:/\u684C\u9762/uni-app-dev/uniAppDev/pages/contact/contact.vue"]]);
   const _sfc_main$1 = {};
   function _sfc_render(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", null, "This is message");
   }
-  const PagesPagingPaging = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "D:/\u684C\u9762/uni-app-dev/uniAppDev/pages/paging/paging.vue"]]);
+  const PagesMessageMessage = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "D:/\u684C\u9762/uni-app-dev/uniAppDev/pages/message/message.vue"]]);
   __definePage("pages/index/index", PagesIndexIndex);
-  __definePage("pages/paging/paging", PagesPagingPaging);
+  __definePage("pages/detail/detail", PagesDetailDetail);
+  __definePage("pages/contact/contact", PagesContactContact);
+  __definePage("pages/message/message", PagesMessageMessage);
   function formatAppLog(type, filename, ...args) {
     if (uni.__log__) {
       uni.__log__(type, filename, ...args);

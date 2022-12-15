@@ -74,6 +74,7 @@
       "style": "dark",
       "background": "#F8F8F8"
     },
+    "arguments": "{\"name\":\"详情页\",\"path\":\"pages/detail/detail\",\"query\":\"id=80\"}",
     "uniStatistics": {
       "enable": false
     },
@@ -101,7 +102,7 @@
     "tabBar": {
       "position": "bottom",
       "color": "#999",
-      "selectedColor": "#007aff",
+      "selectedColor": "#000",
       "borderStyle": "rgba(0,0,0,0.4)",
       "blurEffect": "none",
       "fontSize": "10px",
@@ -113,15 +114,25 @@
           "pagePath": "pages/index/index",
           "iconPath": "/static/tabbarIcon/index.png",
           "selectedIconPath": "/static/tabbarIcon/indexSelect.png",
-          "text": "首页",
-          "selectedColor": "#000"
+          "text": "首页"
         },
         {
-          "pagePath": "pages/paging/paging",
+          "pagePath": "pages/detail/detail",
           "iconPath": "/static/tabbarIcon/paging.png",
           "selectedIconPath": "/static/tabbarIcon/pagingSelect.png",
-          "text": "信息",
-          "selectedColor": "#000"
+          "text": "详情"
+        },
+        {
+          "pagePath": "pages/message/message",
+          "iconPath": "/static/tabbarIcon/message.png",
+          "selectedIconPath": "/static/tabbarIcon/messageSelect.png",
+          "text": "信息"
+        },
+        {
+          "pagePath": "pages/contact/contact",
+          "iconPath": "/static/tabbarIcon/contact.png",
+          "selectedIconPath": "/static/tabbarIcon/contactSelect.png",
+          "text": "我们"
         }
       ],
       "selectedIndex": 0,
@@ -129,7 +140,7 @@
       "child": [
         "lauchwebview"
       ],
-      "selected": 0
+      "selected": 1
     }
   },
   "launch_path": "__uniappview.html"

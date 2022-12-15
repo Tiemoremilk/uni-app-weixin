@@ -3,12 +3,23 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "首页"		
+				"navigationBarTitleText": "首页"
 			}
 		}, {
-			"path": "pages/paging/paging",
+			"path": "pages/detail/detail",
 			"style": {
-				"navigationBarTitleText": "分页"
+				"navigationBarTitleText": "详情页"
+			}
+		},
+		{
+			"path": "pages/contact/contact",
+			"style": {
+				"navigationBarTitleText": "我们"
+			}
+		}, {
+			"path": "pages/message/message",
+			"style": {
+				"navigationBarTitleText": "信息页"
 			}
 		}
 	],
@@ -20,17 +31,35 @@
 		"enablePullDownRefresh": true
 	},
 	"tabBar": {
-		"selectedColor":"#000",
+		"selectedColor": "#000",
 		"list": [{
 			"pagePath": "pages/index/index",
 			"iconPath": "/static/tabbarIcon/index.png",
 			"selectedIconPath": "/static/tabbarIcon/indexSelect.png",
 			"text": "首页"
 		}, {
-			"pagePath": "pages/paging/paging",
+			"pagePath": "pages/detail/detail",
 			"iconPath": "/static/tabbarIcon/paging.png",
 			"selectedIconPath": "/static/tabbarIcon/pagingSelect.png",
-			"text": "分页"
+			"text": "详情"
+		}, {
+			"pagePath": "pages/message/message",
+			"iconPath": "/static/tabbarIcon/message.png",
+			"selectedIconPath": "/static/tabbarIcon/messageSelect.png",
+			"text": "信息"
+		}, {
+			"pagePath": "pages/contact/contact",
+			"iconPath": "/static/tabbarIcon/contact.png",
+			"selectedIconPath": "/static/tabbarIcon/contactSelect.png",
+			"text": "我们"
+		}]
+	},
+	"condition": {
+		"current": 0,
+		"list": [{
+			"name": "详情页",
+			"path": "pages/detail/detail",
+			"query": "id=80"
 		}]
 	},
 	"uniIdRouter": {}
