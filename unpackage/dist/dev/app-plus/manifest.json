@@ -34,7 +34,6 @@
     },
     "popGesture": "close",
     "launchwebview": {
-      "render": "always",
       "id": "1",
       "kernel": "WKWebview"
     },
@@ -79,6 +78,12 @@
       "enable": false
     },
     "allowsInlineMediaPlayback": true,
+    "safearea": {
+      "background": "#FFFFFF",
+      "bottom": {
+        "offset": "auto"
+      }
+    },
     "uni-app": {
       "control": "uni-v3",
       "vueVersion": "3",
@@ -92,6 +97,37 @@
       "webView": {
         "minUserAgentVersion": "49.0"
       }
+    },
+    "tabBar": {
+      "position": "bottom",
+      "color": "#999",
+      "selectedColor": "#007aff",
+      "borderStyle": "rgba(0,0,0,0.4)",
+      "blurEffect": "none",
+      "fontSize": "10px",
+      "iconWidth": "24px",
+      "spacing": "3px",
+      "height": "50px",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "iconPath": "/static/tabbarIcon/index.png",
+          "selectedIconPath": "/static/tabbarIcon/indexSelect.png",
+          "text": "首页"
+        },
+        {
+          "pagePath": "pages/paging/paging",
+          "iconPath": "/static/tabbarIcon/paging.png",
+          "selectedIconPath": "/static/tabbarIcon/pagingSelect.png",
+          "text": "信息"
+        }
+      ],
+      "selectedIndex": 0,
+      "shown": true,
+      "child": [
+        "lauchwebview"
+      ],
+      "selected": 0
     }
   },
   "launch_path": "__uniappview.html"
