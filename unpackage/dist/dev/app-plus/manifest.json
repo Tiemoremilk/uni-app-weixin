@@ -113,13 +113,15 @@
           "pagePath": "pages/index/index",
           "iconPath": "/static/tabbarIcon/index.png",
           "selectedIconPath": "/static/tabbarIcon/indexSelect.png",
-          "text": "首页"
+          "text": "首页",
+          "selectedColor": "#000"
         },
         {
           "pagePath": "pages/paging/paging",
           "iconPath": "/static/tabbarIcon/paging.png",
           "selectedIconPath": "/static/tabbarIcon/pagingSelect.png",
-          "text": "信息"
+          "text": "信息",
+          "selectedColor": "#000"
         }
       ],
       "selectedIndex": 0,

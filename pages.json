@@ -3,7 +3,7 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "首页"
+				"navigationBarTitleText": "首页"		
 			}
 		}, {
 			"path": "pages/paging/paging",
@@ -20,6 +20,7 @@
 		"enablePullDownRefresh": true
 	},
 	"tabBar": {
+		"selectedColor":"#000",
 		"list": [{
 			"pagePath": "pages/index/index",
 			"iconPath": "/static/tabbarIcon/index.png",
@@ -29,7 +30,7 @@
 			"pagePath": "pages/paging/paging",
 			"iconPath": "/static/tabbarIcon/paging.png",
 			"selectedIconPath": "/static/tabbarIcon/pagingSelect.png",
-			"text": "信息"
+			"text": "分页"
 		}]
 	},
 	"uniIdRouter": {}
