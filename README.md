@@ -47,5 +47,5 @@ export default {
 ```
 
 比较使用而言最大的区别就是 setup语法糖使用onPullDownRefresh需要自己从@dcloudio/uni-app引入，其实onReachBottom这些也是同样的用法，详细可以看官网的用法
-【生命周期】https://uniapp.dcloud.net.cn/tutorial/page.html 
+https://uniapp.dcloud.net.cn/tutorial/page.html 
 我们需要注意的是在vue里 setup是在created生命周期函数被完全初始化之前执行的函数 ， 使用组合式API没有 beforeCreate 和 created 这两个生命周期 ，那么在uni-app组件生命周期里应该也是一样的
