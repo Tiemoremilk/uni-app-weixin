@@ -17,7 +17,7 @@ const getDataList = () => {
 	uni.request({
 		url: '',
 		success(res: any) {
-			dataList.message = res;
+			dataList.message = res.data.message;
 		}
 	});
 };
