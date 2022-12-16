@@ -9,7 +9,7 @@
 - uni-app指南：https://uniapp.dcloud.net.cn/
 ### 使用小记
 
-- [x] **生命周期相关操作**
+#### **生命周期相关操作**
 
 ```typescript
 //刷新vue3写法
@@ -46,13 +46,11 @@ export default {
 </script>
 ```
 
-比较使用而言最大的区别就是 setup语法糖使用onPullDownRefresh需要自己从@dcloudio/uni-app引入，其实onReachBottom这些也是同样的用法，详细可以看官网的用法
-https://uniapp.dcloud.net.cn/tutorial/page.html 
-我们需要注意的是在vue里 setup是在created生命周期函数被完全初始化之前执行的函数 ， 使用组合式API没有 beforeCreate 和 created 这两个生命周期 ，那么在uni-app组件生命周期里应该也是一样的
+比较使用而言最大的区别就是 setup语法糖使用onPullDownRefresh需要自己从@dcloudio/uni-app引入，其实onReachBottom这些也是同样的用法，详细可以看官网的用法https://uniapp.dcloud.net.cn/tutorial/page.html 我们需要注意的是在vue里 setup是在created生命周期函数被完全初始化之前执行的函数 ， 使用组合式API没有 beforeCreate 和 created 这两个生命周期 ，那么在uni-app组件生命周期里应该也是一样的
 
 
 
-- [x] **谈谈从vsCode过渡到Hbuildx**
+#### **谈谈从vsCode过渡到Hbuildx**
 
 为什么搭建uni-app，建议使用Hbuildx ?
 首先我们要明白的是vsCode只是一个代码编辑管理的工具，在uni-app中我们做跨端需要有不同的环境，而Hbuildx刚好满足我们的需求，另外他内置了很多开发模块，纵然vsCode通过插件依赖能做到，但在开发uni-app建议还是使用Hbuildx，因为它更方便快捷 https://www.dcloud.io/hbuilderx.html
