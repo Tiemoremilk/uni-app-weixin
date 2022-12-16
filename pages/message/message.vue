@@ -1,7 +1,18 @@
 <template>
-	<view>This is message</view>
+	<view>{{ title }}</view>
 </template>
 
-<script></script>
+//刷新vue3写法
+<script setup lang="ts">
+import { onPullDownRefresh } from '@dcloudio/uni-app';
+import { ref } from 'vue';
+const title = ref('你好');
+onPullDownRefresh(() => {
+	setTimeout(() => {
+		title.value = 'This is message';
+		uni.stopPullDownRefresh();
+	}, 1000);
+});
+</script>
 
 <style></style>

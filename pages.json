@@ -3,7 +3,8 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "首页"
+				"navigationBarTitleText": "首页",
+				"onReachBottomDistance": 200
 			}
 		}, {
 			"path": "pages/detail/detail",
@@ -62,5 +63,6 @@
 			"query": "id=80"
 		}]
 	},
+
 	"uniIdRouter": {}
 }
