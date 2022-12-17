@@ -89,3 +89,24 @@ onPullDownRefresh(() => {
 ```
 
 个人使用发现一个问题，在vsCode中有些情况返回数据不定义类型不会提示，但在Hbuildx会爆红（例如上例代码success（）中res的any类型），有可能是插件问题，vsCode可以自己找到，Hbuildx装了插件也不太行。但这无疑会让代码规范很多，让过度依赖插件的人修正过来，虽然刚开始很难受
+
+#### **:Array<string>和ref<Array<string>>([])**
+
+```typescript
+const imgArr:Array<string> = ref([])
+const imgArr = ref<Array<string>>([])
+```
+
+犯了一个愚蠢的错误，只能说基础功不扎实。在说这个之前我们首先要明白ref的用法和基础知识，说到ref就不得不说reactive， reactive参数一般都是复杂数据类型，如果是基础类型我们需要用花括号包裹，reactive使用Proxy实现数据代理而 ref通过使用Object.defineProperty()的get和set实现数据代理 ，要说区别就是 proxy代理整个对象,defineProperty只能代理某个属性 ，这就是ref和reactive本质区别，更像是前者对后者的封装，再说说ref的基本知识， ref 参数可以是基本数据类型，也可以接受对象类型 ， 当参数是对象类型时，其实底层的本质还是reactive,系统会自动给ref 转成reactive赋值
+
+```typescript
+ref('xxxx') -> reactive({value:'xxxx'})
+```
+
+这就解释了我们通过ref绑定完需要 .value获取结果,而reactive并不需要。在上面错误中，前者是声明了一个string[]的imgArr，后者只是绑定了string[]。在此string[]没法通过.value操作数据，所以下面代码会报错
+
+```typescript
+const imgArr:Array<string> = ref([])
+const res = imgArr.value
+```
+

@@ -14,12 +14,26 @@ const dataList = reactive<dataListType>({
 	message: []
 });
 const getDataList = () => {
-	uni.request({
-		url: '',
-		success(res: any) {
-			dataList.message = res.data.message;
-		}
-	});
+	// 	uni.request({
+	// 		url: 'http://localhost:8082/api/getgoods',
+	// 		success(res: any) {
+	// 			dataList.message = res.data.message;
+	// 			uni.setStorage({
+	// 				key: 'message',
+	// 				data: 'Hellow',
+	// 				success() {
+	// 					uni.getStorage({
+	// 						key: 'message',
+	// 						success(res) {
+	// 							console.log(res);
+	// 						}
+	// 					});
+	// 				}
+	// 			});
+	// 			// uni.setStorageSync('message', 'Hellow');
+	// 			// console.log(uni.getStorageSync('message'));
+	// 		}
+	// 	});
 };
 onLoad(() => {
 	getDataList();
