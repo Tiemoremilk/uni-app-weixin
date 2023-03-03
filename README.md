@@ -98,7 +98,6 @@ const imgArr:Array<string> = ref([])
 const imgArr = ref<Array<string>>([])
 ```
 
-犯了一个愚蠢的错误，只能说基础功不扎实。
 在说错误原因之前我们首先要明白ref的用法和基础知识，说到ref就不得不说reactive， reactive参数一般都是复杂数据类型，如果是基础类型我们需要用花括号包裹，reactive使用Proxy实现数据代理而ref通过使用Object.defineProperty()的get和set实现数据代理 ，要说区别就是 proxy代理整个对象，defineProperty只能代理某个属性 ，这就是ref和reactive本质区别，更像是前者对后者的封装，再说说ref的基本知识， ref 参数可以是基本数据类型，也可以接受对象类型 ， 当参数是对象类型时，其实底层的本质还是reactive，系统会自动给ref转成reactive赋值
 
 ```typescript
